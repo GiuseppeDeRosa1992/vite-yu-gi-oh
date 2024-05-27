@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-1 p-0 mb-2">
+    <div class="col-12 col-sm-5 col-md-3 col-lg-2 mx-md-1 p-0 mb-2">
         <figure class="m-0 h-100">
             <img :src="card.card_images[0].image_url" class="card-img-top img-fluid" alt="">
             <h5 class="card-text my-fs py-2 text-center">{{ card.name }}</h5>
