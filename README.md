@@ -1,7 +1,7 @@
-# Vue 3 + Vite
+# VITE YU-GI-OH
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+1) CREO PROGETTO VITE IMPORTO LA LISTA E IMPORTO IL LINK NEL APP.VUE. TRAMITE UN COMPONENTE PADRE CICLO PER GENERARE LE CARD TRAMITE UN COMPONENTE FIGLIO CHE MI GENERA LA CARD SINGOLA TRAMITE LE PROPS
 
-## Recommended IDE Setup
+2) SPOSTO I DATI IN UNO STORE.JS DENTRO UN ARRAY CHE CHIAMO CARD, IL COMPONEMNTE PADRE RICHIAMA STORE.CARD E CICLA PER PASSARE AL FIGLIO CHE GENERA LA CARD SINGOLA..QUESTO MI TORNERA UTILE PER IL BONUS
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+3) BONUS DOVE RECUPERO I DATI DELLE CARD TRAMITE UN AXIOS (SERVER ESTERNO) CHE IMPORTO TRAMITE CDN. AXIOS ANDRà A SCRIVERE DENTRO STORE.CARD CHE QUINDI DOVRò SVUOTARE QUANDO CI ANDRò A LAVORARE CON AXIOS. IL LINK PER LA AP è QUESTO (https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0)
