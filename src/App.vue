@@ -1,10 +1,21 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
+export default {
+  components: {
+    AppHeader,
+
+  },
+
+  data() {
+    return {
+
+    }
+  }
+}
 </script>
 
 <template>
-  <h1>Ciao</h1>
-  <HelloWorld />
+  <AppHeader />
 </template>
 
 <style scoped></style>
