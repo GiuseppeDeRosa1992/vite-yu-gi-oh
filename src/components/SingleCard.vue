@@ -11,7 +11,7 @@ export default {
         <figure class="m-0 h-100">
             <img :src="card.card_images[0].image_url" class="card-img-top img-fluid" alt="">
             <h5 class="card-text my-fs py-2 text-center">{{ card.name }}</h5>
-            <h6 class="card-text my-fs py-2s text-center text-dark">{{ card.archetype }} {{ card.attribute }}</h6>
+            <h6 class="card-text my-fs py-2s text-center text-dark">{{ card.archetype }}</h6>
         </figure>
     </div>
 </template>

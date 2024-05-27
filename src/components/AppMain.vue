@@ -5,7 +5,6 @@ import store from '../data/store.js';
 export default {
 
     name: "AppMain",
-    //SERVIVA PRIMA CHE NON AVEVO STORE.JS
     components: {
         SingleCard,
     },
