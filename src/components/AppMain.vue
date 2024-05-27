@@ -28,8 +28,8 @@ export default {
 <template>
     <main class="container px-5 py-2">
         <!-- SEZIONE SELECT -->
-        <section id="input" class="container mb-2">
-            <select name="type" id="" class="w-25 p-2">
+        <section id="input" class="container mb-2 text-center text-sm-start">
+            <select name="type" id="" class="w-25 px-0 py-1 p-sm-2">
                 <option value="">Alien</option>
             </select>
         </section>
@@ -37,7 +37,7 @@ export default {
         <section id="card" class="container bg-white p-4">
             <div class="content-card text-white">
                 <div class="found p-2 bg-dark mx-md-1">
-                    <h6 class="m-0 px-3">Found 39 Cards</h6>
+                    <h6 class="m-0 px-0 px-sm-3">Found 39 Cards</h6>
                 </div>
                 <div class="row m-0 justify-content-between">
                     <SingleCard v-for="cardSingle in store.cards" :card="cardSingle" />
