@@ -1,6 +1,7 @@
 <script>
 import SingleCard from './SingleCard.vue';
 import store from '../data/store.js';
+import axios from 'axios';
 
 export default {
 
@@ -17,7 +18,13 @@ export default {
     },
 
     methods: {
-
+        getArchetype() {
+            console.log(this.searchType)
+            axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=${this.searchType}`).then(risultato => {
+                this.store.cards = risultato.data.data
+                this.searchType = ""
+            })
+        }
     },
 
     mounted() {
@@ -30,9 +37,12 @@ export default {
     <main class="container px-5 py-2">
         <!-- SEZIONE SELECT -->
         <section id="input" class="container mb-2 text-center text-sm-start">
-            <select name="type" id="" class="w-25 px-0" v-model="searchType">
-                <option value="" v-for="archetype in store.archetypeList"> {{ archetype.archetype_name }} </option>
+            <select name="type" id="" class="w-25 px-0" @change="getArchetype()" v-model="searchType">
+                <option :value="archetype.archetype_name" v-for="archetype in store.archetypeList">
+                    {{ archetype.archetype_name }}
+                </option>
             </select>
+
         </section>
         <!-- SEZIONE CARD -->
         <section id="card" class="container bg-white p-4">

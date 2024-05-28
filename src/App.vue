@@ -24,7 +24,7 @@ export default {
     })
 
     axios.get(/*dopo num= decido quante carte creare e dopo offset= decido quante me ne deve saltare di quelle inziali della lista*/
-      "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=Alien").then(risultato => {
+      "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=30&offset=10&archetype=Alien").then(risultato => {
 
         //dichiaro che in store.js la lista cards è uguale al risultato che mi da la funzione che genera le card
         this.store.cards = risultato.data.data
