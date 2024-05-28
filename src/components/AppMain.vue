@@ -11,7 +11,8 @@ export default {
 
     data() {
         return {
-            store
+            store,
+            searchType: ""
         }
     },
 
@@ -29,8 +30,8 @@ export default {
     <main class="container px-5 py-2">
         <!-- SEZIONE SELECT -->
         <section id="input" class="container mb-2 text-center text-sm-start">
-            <select name="type" id="" class="w-25 px-0 py-1 p-sm-2">
-                <option value="">Alien</option>
+            <select name="type" id="" class="w-25 px-0" v-model="searchType">
+                <option value="" v-for="archetype in store.archetypeList"> {{ archetype.archetype_name }} </option>
             </select>
         </section>
         <!-- SEZIONE CARD -->

@@ -16,7 +16,12 @@ export default {
     }
   },
   created() {
-    //creo funzione che mi genera le card tramite un server esterno che poi inietto nella lista delle cards
+    axios.get("https://db.ygoprodeck.com/api/v7/archetypes.php").then(risultato => {
+      console.log(risultato.data)
+
+      this.store.archetypeList = risultato.data
+      console.log(this.store.archetypeList)
+    })
 
     axios.get(/*dopo num= decido quante carte creare e dopo offset= decido quante me ne deve saltare di quelle inziali della lista*/
       "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=Alien").then(risultato => {
