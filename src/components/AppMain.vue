@@ -48,7 +48,7 @@ export default {
         <section id="card" class="container bg-white p-4">
             <div class="content-card text-white">
                 <div class="found p-2 bg-dark mx-md-1">
-                    <h6 class="m-0 px-0 px-sm-3">Hai trovato: {{ store.cards.length }} card</h6>
+                    <h6 class="m-0 px-0 px-sm-3">Hai trovato: {{ store.cards.length }} cards</h6>
                 </div>
                 <div class="row m-0 justify-content-between">
                     <SingleCard v-for="cardSingle in store.cards" :card="cardSingle" />
