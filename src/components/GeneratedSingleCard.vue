@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: "SingleCard",
+    name: "GeneratedSingleCard",
     props: ["card"],
 }
 </script>

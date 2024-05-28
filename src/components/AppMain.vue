@@ -1,5 +1,5 @@
 <script>
-import SingleCard from './SingleCard.vue';
+import GeneratedSingleCard from './GeneratedSingleCard.vue';
 import store from '../data/store.js';
 import axios from 'axios';
 
@@ -7,7 +7,7 @@ export default {
 
     name: "AppMain",
     components: {
-        SingleCard,
+        GeneratedSingleCard,
     },
 
     data() {
@@ -53,7 +53,7 @@ export default {
                     <h6 class="m-0 px-0 px-sm-3">Hai trovato: {{ store.cards.length }} cards</h6>
                 </div>
                 <div class="row m-0 justify-content-between">
-                    <SingleCard v-for="cardSingle in store.cards" :card="cardSingle" />
+                    <GeneratedSingleCard v-for="cardSingle in store.cards" :card="cardSingle" />
                 </div>
             </div>
         </section>
