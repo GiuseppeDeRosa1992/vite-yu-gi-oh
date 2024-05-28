@@ -37,7 +37,9 @@ export default {
     <main class="container px-5 py-2">
         <!-- SEZIONE SELECT -->
         <section id="input" class="container mb-2 text-center text-sm-start">
+            <!-- AL V-MODEL DEL SELECT DO IL VALORE DI SEARCHTYPE -->
             <select name="type" id="" class="w-25 px-0" @change="getArchetype()" v-model="searchType">
+                <!-- AL VALUE DELLE OPTION DO IL VALORE DELLA LISTA ARCHETYPENAME E COSI FACENDO OGNI VOLTA CHE CAMBIO IL VALORE MI CAMBIA IL SEARCH INPUT -->
                 <option :value="archetype.archetype_name" v-for="archetype in store.archetypeList">
                     {{ archetype.archetype_name }}
                 </option>
