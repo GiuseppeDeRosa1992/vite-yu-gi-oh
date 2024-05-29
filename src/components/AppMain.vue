@@ -20,7 +20,7 @@ export default {
     methods: {
         getArchetype() {
             console.log(this.searchType)
-            axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=${this.searchType}`).then(risultato => {
+            axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=${this.searchType}`).then(risultato => {
                 this.store.cards = risultato.data.data
                 this.searchType = ""
             })
